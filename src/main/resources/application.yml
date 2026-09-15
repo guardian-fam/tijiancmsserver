@@ -13,7 +13,7 @@ spring:
         driver-class-name: com.mysql.jdbc.Driver
         url: jdbc:mysql://localhost:3306/tijian?characterEncoding=utf-8&allowMultiQueries=true
         username: root
-        password: root
+        password: 202331316zlm
         
 mybatis:
     mapper-locations: classpath:mapper/*.xml 

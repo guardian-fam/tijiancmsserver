@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="">
+<mapper namespace="com.neusoft.tijiancms.mapper.PatientMapper">
     <!-- 在这里编写SQL语句 -->
+    <!--登录-->
+    <select id="getPatientByPhoneByPass" resultType="com.neusoft.tijiancms.po.Patient">
+        SELECT * FROM users WHERE userId = #{userId} AND password = #{password}
+    </select>
+    <!--查重-->
+    <select id="getPatientByPhone" resultType="com.neusoft.tijiancms.po.Patient">
+        SELECT * FROM users WHERE userId = #{userId}
+    </select>
+    <!-- 注册 -->
+    <insert id="savePatient" useGeneratedKeys="true" keyProperty="patientId">
+        INSERT INTO users (userId, password, realName, sex, identityCard, birthday, userType)
+        VALUES (#{userId}, #{password}, #{realName}, #{sex}, #{identityCard}, #{birthday}, #{userType})
+    </insert>
 </mapper>

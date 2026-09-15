@@ -1,16 +1,13 @@
 package com.neusoft.tijiancms.mapper;
 
+import com.neusoft.tijiancms.po.Doctor;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
-import com.neusoft.tijiancms.po.Doctor;
-
 @Mapper
 public interface DoctorMapper {
+	//医生登录（根据编码和密码查询）
 
-	@Select("select * from doctor where docCode=#{docCode} and password=#{password}")
-	public Doctor getDoctorByCodeByPass(Doctor doctor);
-	public Doctor getDoctorByCode(String docCode);
-	public Doctor getDoctorByName(String docName);
-
+	@Select("select * from doctor where docCode = #{docCode} and password = #{password}")
+	Doctor getDoctorByCodeByPass(Doctor doctor);
 }

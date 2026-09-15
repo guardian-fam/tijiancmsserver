@@ -3,7 +3,7 @@ package com.neusoft.tijiancms.po;
 import java.util.Date;
 
 public class Patient {
-    private String patientId;
+    private String userId;
     private String password;
     private String realName;
     private int sex;
@@ -11,12 +11,12 @@ public class Patient {
     private Date birthday;
     private int userType;
 
-    public String getPatientId() {
-        return patientId;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setPatientId(String patientId) {
-        this.patientId = patientId;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getPassword() {
@@ -70,7 +70,7 @@ public class Patient {
     @Override
     public String toString() {
         return "Patient{" +
-                "patientId='" + patientId + '\'' +
+                "userId='" + userId + '\'' +
                 ", password='" + password + '\'' +
                 ", realName='" + realName + '\'' +
                 ", sex=" + sex +
