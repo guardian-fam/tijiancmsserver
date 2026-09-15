@@ -8,6 +8,9 @@ import com.neusoft.tijiancms.po.Doctor;
 @Mapper
 public interface DoctorMapper {
 
-	@Select("select * from doctor where doctor_no=#{docCode} and password=#{password}")
+	@Select("select * from doctor where docCode=#{docCode} and password=#{password}")
 	public Doctor getDoctorByCodeByPass(Doctor doctor);
+	public Doctor getDoctorByCode(String docCode);
+	public Doctor getDoctorByName(String docName);
+
 }
